@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+
+#Spring-boot使用thymeleaf时默认是有缓存的，即你把一个页面代码改了不会刷新页面的效果
+#你必须重新运行spring-boot的main()方法才能看到页面更改的效果。
+#我们可以把thymeleaf的缓存关掉，添加以下代码
+#spring.thymeleaf.cache=false
+
+#mybatis全局配置
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  type-aliases-package: com.seckill2.entity
+  mapper-locations: classpath:mapper/*.xml
+spring:
+  datasource:
+  #使用Mysql
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/seckill
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  #druid配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 30
+    maxWait: 6000
+
