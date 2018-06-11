@@ -65,6 +65,23 @@
 			<optional>true</optional>
 		</dependency>
 
+		<!--jadis-->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+		</dependency>
+		<!-- 在Redis缓存中使用的序列化工具protostuff -->
+		<dependency>
+			<groupId>io.protostuff</groupId>
+			<artifactId>protostuff-core</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.protostuff</groupId>
+			<artifactId>protostuff-runtime</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+
 		<!--test-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
